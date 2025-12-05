@@ -1,0 +1,13 @@
+# Backend ignore
+furnishop-mongo-backend/.env
+furnishop-mongo-backend/uploads/
+furnishop-mongo-backend/node_modules/
+
+# Frontend ignore
+furniture-shop/node_modules/
+furniture-shop/dist/
+
+# General ignore
+*.log
+.DS_Store
+Thumbs.db

@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* === Full-bleed section: tràn full chiều ngang, thoát khỏi container === */
+.full-bleed {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+.admin-dark-form input,
+.admin-dark-form textarea,
+.admin-dark-form select {
+    color: #fff !important;
+    caret-color: #fff !important;
+    background-color: rgba(255, 255, 255, .06) !important;
+    border-color: rgba(255, 255, 255, .2) !important;
+}
+
+.admin-dark-form input::placeholder,
+.admin-dark-form textarea::placeholder {
+    color: rgba(255, 255, 255, .6) !important;
+}
+
+.admin-dark-form input:focus,
+.admin-dark-form textarea:focus,
+.admin-dark-form select:focus {
+    outline: none !important;
+    border-color: rgba(255, 255, 255, .4) !important;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, .2) !important;
+}
+
+
+/* Hiệu ứng ấn xuống khi hover */
+.fx-push {
+    transition: transform 0.15s ease, box-shadow 0.2s ease;
+    transform: translateY(0);
+}
+
+.fx-push:hover {
+    transform: translateY(3px);
+    /* ấn xuống nhẹ */
+}
+
+.fx-push:active {
+    transform: translateY(5px);
+    /* ấn sâu hơn khi click */
+}
+
+/* Tăng sang trọng */
+.fx-gold {
+    box-shadow: 0 6px 16px rgba(184, 142, 47, 0.25);
+}
+
+.fx-gold:hover {
+    box-shadow: 0 2px 8px rgba(184, 142, 47, 0.35);
+}
+
+/* fx-push: hiệu ứng nút bị nhấn xuống */
+.fx-push {
+    transition: all 0.15s ease;
+}
+
+.fx-push:active {
+    transform: translateY(3px) scale(0.97);
+}
+
+
+
+
+
+@keyframes slideUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.animate-slideUp {
+    animation: slideUp 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.25s ease;
+}
